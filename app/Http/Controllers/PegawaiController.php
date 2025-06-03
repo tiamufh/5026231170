@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PegawaiController extends Controller
 {
@@ -20,5 +21,7 @@ class PegawaiController extends Controller
         $alamat = $request->input('alamat');
         return "Nama : ".$nama."<br> Alamat : ".$alamat ."<br> Aslinyaa : ". $request;
     }
+
+
 
 }
