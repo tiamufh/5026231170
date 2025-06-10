@@ -42,14 +42,11 @@ public function store(Request $request)
 // method untuk edit data pegawai
 public function edit($id) //gapake request karena ada primary key
 {
-	// mengambil data pegawai berdasarkan id yang dipilih
-	$pegawai = DB::table('pegawai')
-        ->where('pegawai_id',$id) //khusus operator =
-        ->get();
-	// passing data pegawai yang didapat ke view edit.blade.php
-	return view('edit',['pegawai' => $pegawai]);
-
+    $pegawai = DB::table('pegawai')->where('pegawai_id', $id)->first();
+    return view('edit', ['pegawai' => $pegawai]);
 }
+
+
 
 // update data pegawai
 public function update(Request $request)

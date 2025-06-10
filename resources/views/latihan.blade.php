@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Halaman Pertama</title>
-    <style></style>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@100;300;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="mycss1.css" />
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bantu Adaptasi Mahasiswa Baru, ITS Gelar Mentoring Agama Islam</title>
+    <!-- CSS untuk memformat, membantu blok agar format lebih cepat -->
+    <!-- inpage -->
+    <link rel="stylesheet" href="mycss1.css">
+</head>
+<body>
+    <div class="header">
+        <h1>
 
-  <body>
-    <p>
-      <a href="https://www.its.ac.id">web ITS</a> |
-      <a href="https://google.co.id" target="_blank">Google</a> |
-      <a href="https://kompas.tv" target="_self">Kompas TV</a> |
-      <a href="#">di halaman ini</a>
-    </p>
-    <h1 style="color: blue">
-      Bantu Adaptasi Mahasiswa Baru, ITS Gelar Mentoring Agama Islam
+        </h1>
+    </div>
+    <div class="topnav">
+        <a href="https://www.its.ac.id" target="_blank"> Web ITS</a> |
+        <a href="https://google.co.id" target="_blank"> Google</a> |
+        <a href="https://kompas.tv" target="_self"> Kompas TV</a> |
+        <a href="#"> Di halaman ini</a>
+    </div>
+    <h1>
+        <b>Bantu Adaptasi Mahasiswa Baru, ITS Gelar Mentoring Agama Islam</b>
     </h1>
-    <h2>Oleh : itsash | 20 | Source : ITS Online</h2>
+    <h2>
+        <i>Oleh : itsash / 18 / Source : ITS Online</i>
+    </h2>
+
     <img src="gambar2.png" alt="gambar2" style="width: 1200px" />
     <br />
     <p style="margin-top: 3px">
       Suasana Kuliah Umum Mentoring Agama Islam Semester Genap 2024/2025
     </p>
-    <p class="kalimatpembuka">kanpus its</p>
     <p style="margin-left: 20px; font-size: 16px">
-      <strong>Kampus ITS, ITS News —</strong> Institut Teknologi Sepuluh
-      Nopember (ITS) kembali menggelar Mentoring Agama Islam Semester Genap
-      2024/2025 dengan berbagai rangkaian kegiatan. Kegiatan ini bertujuan
-      membentuk karakter mahasiswa baru (maba) muslim berbasis nilai-nilai
-      Islam. Acara yang resmi dibuka dalam kuliah umum ini berlangsung di Masjid
-      Manarul Ilmi ITS, Sabtu (22/02).
+      <strong>Kampus ITS, ITS News —</strong>
+      <span class="darkblue">Institut Teknologi Sepuluh Nopember (ITS) </span>
+      kembali menggelar Mentoring Agama Islam Semester Genap 2024/2025 dengan
+      berbagai rangkaian kegiatan. Kegiatan ini bertujuan membentuk karakter
+      mahasiswa baru (maba) muslim berbasis nilai-nilai Islam. Acara yang resmi
+      dibuka dalam kuliah umum ini berlangsung di Masjid Manarul Ilmi ITS, Sabtu
+      (22/02).
     </p>
     <p>
       Dalam pembukaan acara, Ketua Tim Pembina Kerohanian Islam (TPKI) ITS Prof
@@ -72,5 +74,40 @@
       mahasiswa mampu mengamalkannya ilmu keislaman dalam kehidupan
       sehari-hari,” tambah Dosen Statistika ITS tersebut.
     </p>
-  </body>
+    <!-- Adding a checkbox -->
+    <p>
+        <input type="checkbox" id="subscribe" name="subscribe">
+        <label for="subscribe">Subscribe to newsletter</label>
+    </p>
+    <!-- Adding a text box -->
+    <p>
+        <label for="feedback">Your Feedback:</label>
+        <input type="text" id="feedback" name="feedback" placeholder="Enter your feedback here">
+    </p>
+    <!-- Adding a table -->
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Session</th>
+                <th>Topic</th>
+                <th>Speaker</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Introduction to Islamic Values</td>
+                <td>Prof. Dr. Muhammad Mashuri</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Islamic Knowledge and Its Application</td>
+                <td>Prof. Dr. Ir Adi Soeprijanto</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Islamic Practices in Daily Life</td>
+                <td>Dr. Ahmad Zainuri</td>
+            </tr>
+        </table>
+    </div>
+</body>
 </html>

@@ -6,6 +6,7 @@ use App\Http\Controllers\Coba;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
+use App\Http\Controllers\CatDBController;
 
 
 
@@ -71,7 +72,7 @@ Route::get('8danantara', function () {
     return view('danantara');
 });
 
-Route::get('9link', function () {
+Route::get('frontend', function () {
     return view('frontend');
 });
 
@@ -102,3 +103,19 @@ Route::get('/pegawai/hapus/{id}',[PegawaiDBController::class,'hapus']);
 
 Route::get('/pegawai/cari',[PegawaiDBController::class,'cari']);
 
+
+
+// ROUTE CAT
+Route::get('/cat', [CatDBController::class,'index']);
+
+Route::get('/cat/tambah', [CatDBController::class,'tambahcat']);
+
+Route::post('/cat/store', [CatDBController::class,'store']);
+
+Route::get('/cat/edit/{id}', [CatDBController::class,'edit']);
+
+Route::post('/cat/update', [CatDBController::class, 'update']);
+
+Route::get('/cat/hapus/{id}',[CatDBController::class,'hapus']);
+
+Route::get('/cat/cari',[CatDBController::class,'cari']);

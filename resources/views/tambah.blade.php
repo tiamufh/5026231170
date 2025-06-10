@@ -1,72 +1,46 @@
 @extends('template')
 
+@section('title', 'Tambah Pegawai Baru')
+
 @section('content')
-	<h3>Data Pegawai</h3>
-
-	<a href="/pegawai" class="btn btn-info"> Kembali</a>
-
-	<br/>
-	<br/>
-
-	<form action="/pegawai/store" method="post" class="form-horizontal">
-		{{ csrf_field() }}
-
-        <div class="form-group has-success">
-            <label class="control-label col-sm-2" for="nama">
-                Nama
-            </label>
-            <div class="col-sm-6">
-                <input class="form-control"
-                       type="text"
-                       id="nama"
-                       placeholder="Masukkan nama lengkap..."
-                       required="required">
-            </div>
+    <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h3>Tambah Data Pegawai Baru</h3>
+            <a href="/pegawai" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Kembali
+            </a>
         </div>
+        <div class="card-body">
 
-        <div class="form-group has-success">
-            <label class="control-label col-sm-2" for="jabatan">
-                Jabatan
-            </label>
-            <div class="col-sm-6">
-                <input class="form-control"
-                       type="text"
-                       id="jabatan"
-                       placeholder="Masukkan jabatan lengkap..."
-                       required="required">
-            </div>
+            <form action="/pegawai/store" method="post">
+                @csrf
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan nama lengkap..." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="jabatan">Jabatan</label>
+                    <input type="text" class="form-control" id="jabatan" name="jabatan" placeholder="Masukkan jabatan..." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="umur">Umur</label>
+                    <input type="number" class="form-control" id="umur" name="umur" placeholder="Masukkan umur..." required min="17">
+                </div>
+
+                <div class="form-group">
+                    <label for="alamat">Alamat</label>
+                    <textarea class="form-control" id="alamat" name="alamat" placeholder="Masukkan alamat lengkap..." required rows="4"></textarea>
+                </div>
+
+                <hr>
+                
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-save"></i> Simpan Data
+                </button>
+
+            </form>
         </div>
-
-        <div class="form-group has-success">
-            <label class="control-label col-sm-2" for="umur">
-                Umur
-            </label>
-            <div class="col-sm-6">
-                <input class="form-control"
-                       type="text"
-                       id="umur"
-                       placeholder="Masukkan umur..."
-                       required="required">
-            </div>
-        </div>
-
-        <div class="form-group has-success">
-            <label class="control-label col-sm-2" for="alamat">
-                Alamat
-            </label>
-            <div class="col-sm-6">
-                <input class="form-control"
-                       type="text"
-                       id="alamat"
-                       placeholder="Masukkan alamat...">
-                       required="required"
-            </div>
-        </div>
-
-		{{-- Jabatan <input type="text" name="jabatan" required="required"> <br/>
-		Umur <input type="number" name="umur" required="required"> <br/>
-		Alamat <textarea name="alamat" required="required"></textarea> <br/>
-		<input type="submit" value="Simpan Data"> --}}
-	</form>
-
-    @endsection
+    </div>
+@endsection
