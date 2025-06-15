@@ -7,8 +7,9 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\CatDBController;
-
-
+use App\Http\Controllers\KeranjangDBController;
+use App\Http\Controllers\CounterController;
+use App\Http\Controllers\KaryawanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,9 +22,9 @@ use App\Http\Controllers\CatDBController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
 Route::get('halo', function () {
@@ -105,7 +106,7 @@ Route::get('/pegawai/cari',[PegawaiDBController::class,'cari']);
 
 
 
-// ROUTE CAT
+// // ROUTE CAT
 Route::get('/cat', [CatDBController::class,'index']);
 
 Route::get('/cat/tambah', [CatDBController::class,'tambahcat']);
@@ -119,3 +120,18 @@ Route::post('/cat/update', [CatDBController::class, 'update']);
 Route::get('/cat/hapus/{id}',[CatDBController::class,'hapus']);
 
 Route::get('/cat/cari',[CatDBController::class,'cari']);
+
+// ROUTE IDEX KERANJANG
+Route::get('/keranjang', [KeranjangDBController::class,'index']);
+Route::get('/keranjang/tambah', [KeranjangDBController::class,'tambah']);
+Route::get('/keranjang/hapus/{id}', [KeranjangDBController::class, 'hapus']);
+
+
+Route::get('/', [CounterController::class, 'index']);
+
+Route::get('/karyawan', [KaryawanController::class, 'index']);
+Route::get('/karyawan/tambah', [KaryawanController::class, 'tambah']);
+Route::get('/karyawan/hapus/{kodepegawai}', [KaryawanController::class, 'hapus']);
+Route::get('/karyawan/cari', [KaryawanController::class, 'cari']);
+Route::post('/karyawan/store', [KaryawanController::class,'store']);
+
