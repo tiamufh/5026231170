@@ -46,9 +46,9 @@
                                 <td class="text-end">Rp {{ number_format($item->Jumlah * $item->Harga, 0, ',', '.') }}</td>
                                 <td class="text-center">
                                     {{-- Tombol Tambah/Beli (disesuaikan dengan alur tugas) --}}
-                                    <a href="/keranjang/tambah" class="btn btn-success btn-sm">
+                                    {{-- <a href="/keranjang/tambah" class="btn btn-success btn-sm">
                                         <i class="fas fa-plus"></i> Beli
-                                    </a>
+                                    </a> --}}
                                     {{-- Tombol Batal/Hapus --}}
                                     <a href="/keranjang/hapus/{{ $item->ID }}" class="btn btn-danger btn-sm" onclick="return confirm('Anda yakin ingin membatalkan pembelian ini?')">
                                         <i class="fas fa-times"></i> Batal
@@ -69,15 +69,15 @@
             </div>
 
             {{-- Informasi dan Tombol Paginasi --}}
-            <div class="mt-4">
+            {{-- <div class="mt-4">
                 <div class="pagination-info text-center text-muted mb-2">
                     Menampilkan <strong>{{ $keranjang->firstItem() }}</strong> - <strong>{{ $keranjang->lastItem() }}</strong> dari <strong>{{ $keranjang->total() }}</strong> data
                 </div>
-                <div class="d-flex justify-content-center">
+                <div class="d-flex justify-content-center"> --}}
                     {{-- Ganti variabel $cat menjadi $keranjang --}}
-                    {{ $keranjang->links() }}
+                    {{-- {{ $keranjang->links() }}
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 @endsection

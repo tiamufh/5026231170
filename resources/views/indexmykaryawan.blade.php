@@ -24,35 +24,22 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @forelse ($karyawan as $k)
+                    @foreach ($mykaryawan as $k)
                         <tr>
                             <td class="text-center">{{ $k->kodepegawai }}</td>
-                            {{-- Nama Lengkap menjadi huruf kapital semua --}}
-                            <td>{{ strtoupper($k->namalengkap) }}</td>
+                            <td>{{ Str::title($k->namalengkap) }}</td>
                             <td class="text-center">{{ $k->divisi }}</td>
-                            {{-- Departemen menjadi huruf kecil semua (Sesuai soal, meskipun tipenya Integer) --}}
-                            <td class="text-center">{{ strtolower($k->departemen) }}</td>
+                            <td class="text-center">{{$k->departemen}}</td>
                             <td class="text-center">
-                                <a href="/karyawan/hapus/{{ $k->kodepegawai }}" class="btn btn-danger btn-sm" onclick="return confirm('Anda yakin ingin menghapus data ini?')">
-                                    Hapus Data
-                                </a>
+                                <a href="/eas/edit/{{ $k->kodepegawai}}" class="btn btn-success btn-sm"><i class="fas fa-pencil-alt"></i> Edit</a>
+                                {{-- Tombol View mengarah ke /mahasiswa/view/{NRP} --}}
+                              <a href="/eas/view/{{ $k->kodepegawai}}" class="btn btn-info btn-sm">View</a>
                             </td>
                         </tr>
-                    @empty
-                        <tr>
-                            <td colspan="5" class="text-center">Tidak ada data.</td>
-                        </tr>
-                    @endforelse
+                    @endforeach
                 </tbody>
             </table>
         </div>
-
-        <hr>
-        {{-- Tombol Tambah Data terletak di bawah tabel --}}
-        <a href="/karyawan/tambah" class="btn btn-primary">Tambah Data</a>
-        {{-- <div class="d-flex justify-content-center mt-4">
-            {{ $karyawan->links() }}
-        </div> --}}
     </div>
 </div>
 @endsection

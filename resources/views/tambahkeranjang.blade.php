@@ -27,20 +27,31 @@
             <form action="/keranjang/store" method="post">
                 @csrf
 
-                <div class="form-group">
-                    <label for="KodeBarang">Kode Barang</label>
-                    <input type="text" class="form-control" id="KodeBarang" name="KodeBarang" placeholder="Masukkan kode barang..." value="{{ old('KodeBarang') }}" required>
+
+                {{-- Baris untuk Kode Barang --}}
+                <div class="row mb-3">
+                    <label for="KodeBarang" class="col-sm-2 col-form-label">Kode Barang</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="KodeBarang" name="KodeBarang" placeholder="Masukkan kode barang..." value="{{ old('KodeBarang') }}" required>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="Jumlah">Jumlah Pembelian</label>
-                    <input type="text" class="form-control" id="Jumlah" name="Jumlah" placeholder="Masukkan jumlah barang..." value="{{ old('Jumlah') }}" required>
+                {{-- Baris untuk Jumlah Pembelian --}}
+                <div class="row mb-3">
+                    <label for="Jumlah" class="col-sm-2 col-form-label">Jumlah Pembelian</label>
+                    <div class="col-sm-10">
+                        <input type="number"step="1" min="0" class="form-control" id="Jumlah" name="Jumlah" placeholder="Masukkan jumlah barang..." value="{{ old('Jumlah') }}" required>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="Harga">Harga per item</label>
-                    <input type="text" class="form-control" id="Harga" name="Harga" placeholder="Masukkan harga per item..." value="{{ old('Harga') }}" required>
+                {{-- Baris untuk Harga per item --}}
+                <div class="row mb-3">
+                    <label for="Harga" class="col-sm-2 col-form-label">Harga per item</label>
+                    <div class="col-sm-10">
+                        <input type="number" step="1000" min="0" class="form-control" id="Harga" name="Harga" placeholder="Masukkan harga per item..." value="{{ old('Harga') }}" required>
+                    </div>
                 </div>
+
 
                 <hr>
 

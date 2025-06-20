@@ -10,6 +10,7 @@ use App\Http\Controllers\CatDBController;
 use App\Http\Controllers\KeranjangDBController;
 use App\Http\Controllers\CounterController;
 use App\Http\Controllers\KaryawanController;
+use App\Http\Controllers\MyKaryawanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -134,4 +135,11 @@ Route::get('/karyawan/tambah', [KaryawanController::class, 'tambah']);
 Route::get('/karyawan/hapus/{kodepegawai}', [KaryawanController::class, 'hapus']);
 Route::get('/karyawan/cari', [KaryawanController::class, 'cari']);
 Route::post('/karyawan/store', [KaryawanController::class,'store']);
+
+
+//ROUTE EAS
+Route::get('/eas', [MyKaryawanController::class, 'index']);
+Route::get('/eas/edit/{kodepegawai}', [MyKaryawanController::class, 'edit']);
+Route::get('/eas/view/{kodepegawai}', [MyKaryawanController::class, 'view']);
+Route::post('/eas/update', [MyKaryawanController::class, 'update']);
 

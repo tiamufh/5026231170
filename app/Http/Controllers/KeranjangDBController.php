@@ -8,7 +8,7 @@ class KeranjangDBController extends Controller
 {
     public function index()
     {
-    	$keranjang = DB::table('keranjangbelanja')->paginate(10);
+    	$keranjang = DB::table('keranjangbelanja')->get();
     	return view('indexkeranjang',['keranjang' => $keranjang]);
 
     }
