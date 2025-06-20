@@ -17,7 +17,7 @@
                 <div class="row mb-3">
                     <label for="nama"  class="col-sm-2 col-form-label" >Kode Pegawai</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="kodepegawai" name="kodepegawai" required value="{{$mykaryawan->namalengkap }}">
+                        <input type="text" class="form-control" id="kodepegawai" name="kodepegawai" required value="{{$mykaryawan->kodepegawai }}">
                     </div>
                 </div>
 
